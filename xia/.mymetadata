@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="xia"
+  id="myeclipse.1568733908400"
+  context-root="/xia"
+  j2ee-spec="5.0"
+  archive="xia.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

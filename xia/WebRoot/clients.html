@@ -1,0 +1,550 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>安靠智能后台管理系统</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Toastr style -->
+    <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <img alt="image" class="rounded-circle" src="img/profile_small.jpg" />
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="block m-t-xs font-bold">张三</span>
+                                <span class="text-muted text-xs block">管理员 <b class="caret"></b></span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a class="dropdown-item" href="#">个人信息</a></li>
+                             
+                                <li class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="login.html">退出</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            AKZN
+                        </div>
+                    </li>
+                  
+                    <li >
+                            <a href="index.html"><i class="fa fa-diamond"></i> <span class="nav-label">首页</span></a>
+                        </li>
+        
+                        <li  >
+                                <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">工程项目管理</span><span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level collapse">
+                                    <li ><a href="projects.html"> 项目管理</a></li>
+                                    <li><a href="workline.html">工作流管理</a></li>
+                                    <li><a href="rules_list.html">质检规则管理</a></li>
+                                    <li><a href="standard.html">工艺标准管理</a></li>
+                                    <li><a href="file_manager.html">工程文档管理</a></li>
+                                </ul>
+                            </li>
+                    <li class="active">
+                        <a href="#"><i class="fa fa-envelope"></i> <span class="nav-label">APP管理 </span><span class="label label-warning float-right">新</span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="ecommerce_products_grid.html">产品管理</a></li>
+                            <li><a href="new_test.html">实验管理</a></li>
+                            <li><a href="new_repair.html">报修管理</a></li>
+                            <li><a href="feedback.html">反馈管理</a></li>
+                 
+                            <li  class="active"><a href="clients.html">app用户管理</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li>
+                            <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">系统管理 </span><span class="label label-warning float-right">16/24</span></a>
+                            <ul class="nav nav-second-level collapse">
+                             
+                                <li><a href="diary.html">系统操作日志</a></li>
+                               
+                            </ul>
+                        </li>
+                   
+                            
+                     
+                    <li>
+                        <a href="news.html"><i class="fa fa-flask"></i> <span class="nav-label">新闻管理</span></a>
+                    </li>
+                    <li>
+                            <a href="full_height.html"><i class="fa fa-flask"></i> <span class="nav-label">公告管理</span></a>
+                        </li>
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top  " role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                        <form role="search" class="navbar-form-custom" action="search_results.html">
+                            <div class="form-group">
+                                <input type="text" placeholder="请输入搜索内容" class="form-control" name="top-search" id="top-search">
+                            </div>
+                        </form>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <span class="m-r-sm text-muted welcome-message">欢迎来到安靠智能管理后台</span>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
+                            </a>
+                       
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
+                            </a>
+                          
+                        </li>
+    
+    
+                        <li>
+                            <a href="login.html">
+                                <i class="fa fa-sign-out"></i> 注销
+                            </a>
+                        </li>
+                    </ul>
+    
+                </nav>
+            </div>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>用户管理中心</h2>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="index.html">主页</a>
+                        </li>
+                       
+                        <li class="breadcrumb-item active">
+                            <strong>APP用户管理</strong>
+                        </li>
+                    </ol>
+                </div>
+                
+            </div>
+        <div class="wrapper wrapper-content  animated fadeInRight">
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="ibox">
+                        <div class="ibox-content">
+                                
+                            <span class="text-muted small float-right"><button type="button" class="btn btn-w-m btn-primary">新增用户</button></span>
+                            <h2>APP用户中心</h2>
+                           
+                            <div class="input-group">
+                                <input type="text" placeholder="搜索客户端" class="input form-control">
+                                <span class="input-group-append">
+                                        <button type="button" class="btn btn btn-primary"> <i class="fa fa-search"></i> 搜索</button>
+                                </span>
+                            </div>
+                            <div class="clients-list">
+              
+                            <ul class="nav nav-tabs">
+                                <li><a class="nav-link active" data-toggle="tab" href="#tab-1"><i class="fa fa-user"></i> 第三方企业用户</a></li>
+                                <li><a class="nav-link" data-toggle="tab" href="#tab-2"><i class="fa fa-briefcase"></i> 内部工作人员</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="tab-1" class="tab-pane active">
+                                        <div class="wrapper wrapper-content animated fadeInRight">
+                                                <div class="row">
+                                                    <div class="col-lg-3">
+                                                        <div class="contact-box">
+                                                            <a class="row" href="#">
+                                                            <div class="col-4">
+                                                                <div class="text-center">
+                                                                    <img alt="image" class="rounded-circle m-t-xs img-fluid" src="img/a3.jpg">
+                                                                    <div class="m-t-xs font-bold">CEO</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-8">
+                                                                <h3><strong>小红</strong></h3>
+                                                                <p><i class="fa fa-map-marker"></i> 中国.北京</p>
+                                                                <address>
+                                                                    <strong>公司名称：&&&</strong><br>
+                                                                    公司地址：***********<br>
+                                                                    QQ 100000 <br>
+                                                                    手机 18900000000 <br>
+                                                                    邮编 100020 <br>
+                                                                </address>
+                                                            </div>
+                                                                </a>
+                                                                <div class="contact-box-footer">
+                                                                        <div class="m-t-xs btn-group">                                              
+                                                                            <a href=""  class="btn btn-xs btn-white"><i class="fa fa-envelope"></i> 发信息</a>
+                                                                            <a href=""  class="btn btn-xs btn-white"><i class="fa fa-pencil"></i> 修改信息</a>
+                                                                            <a href=""  class="btn btn-xs btn-white"><i class="fa fa-ban"></i> 设置禁用</a>
+                                                                        </div>
+                                                                    </div>
+                                                
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                            <div class="contact-box">
+                                                                <a class="row" href="#">
+                                                                <div class="col-4">
+                                                                    <div class="text-center">
+                                                                        <img alt="image" class="rounded-circle m-t-xs img-fluid" src="img/a1.jpg">
+                                                                        <div class="m-t-xs font-bold">CEO</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-8">
+                                                                    <h3><strong>小红</strong></h3>
+                                                                    <p><i class="fa fa-map-marker"></i> 中国.北京</p>
+                                                                    <address>
+                                                                            <strong>公司名称：&&&</strong><br>
+                                                                            公司地址：***********<br>
+                                                                            QQ 100000 <br>
+                                                                            手机 18900000000 <br>
+                                                                            邮编 100020 <br>
+                                                                    </address>
+                                                                </div>
+                                                                    </a>
+                                                                    <div class="contact-box-footer">
+                                                                            <div class="m-t-xs btn-group">
+                                                                              
+                                                                                    <a href=""  class="btn btn-xs btn-white"><i class="fa fa-envelope"></i> 发信息</a>
+                                                                                    <a href=""  class="btn btn-xs btn-white"><i class="fa fa-pencil"></i> 修改信息</a>
+                                                                                    <a href=""  class="btn btn-xs btn-white"><i class="fa fa-ban"></i> 设置禁用</a>
+                                                                           
+                                                                            </div>
+                                                                        </div>
+                                                    
+                                                            </div>
+                                                        </div>          
+                                                    <div class="col-lg-3">
+                                                        <div class="contact-box">
+                                                            <a class="row" href="#">
+                                                            <div class="col-4">
+                                                                <div class="text-center">
+                                                                    <img alt="image" class="rounded-circle m-t-xs img-fluid" src="img/a2.jpg">
+                                                                    <div class="m-t-xs font-bold">HR</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-8">
+                                                                <h3><strong>小红</strong></h3>
+                                                                <p><i class="fa fa-map-marker"></i> 中国.北京</p>
+                                                                <address>
+                                                                        <strong>公司名称：&&&</strong><br>
+                                                                        公司地址：***********<br>
+                                                                        QQ 100000 <br>
+                                                                        手机 18900000000 <br>
+                                                                        邮编 100020 <br>
+                                                                </address>
+                                                            </div>
+                                                                </a>
+                                                                <div class="contact-box-footer">
+                                                                        <div class="m-t-xs btn-group">
+                                                                                <a href=""  class="btn btn-xs btn-white"><i class="fa fa-envelope"></i> 发信息</a>
+                                                                                <a href=""  class="btn btn-xs btn-white"><i class="fa fa-pencil"></i> 修改信息</a>
+                                                                                <a href=""  class="btn btn-xs btn-white"><i class="fa fa-ban"></i> 设置禁用</a>
+                                                                          
+
+                                                                        </div>
+                                                                    </div>
+                                                        </div>
+                                                    </div>
+                                                
+                          
+                                                   
+                                           
+                                                </div>
+                                                </div>
+                               
+                                </div>
+                                <div id="tab-2" class="tab-pane">
+                                        <div class="wrapper wrapper-content animated fadeInRight">
+                                                <div class="row">
+                                                    <div class="col-lg-3">
+                                                        <div class="contact-box">
+                                                            <a class="row" href="#">
+                                                            <div class="col-4">
+                                                                <div class="text-center">
+                                                                    <img alt="image" class="rounded-circle m-t-xs img-fluid" src="img/a4.jpg">
+                                                                    <div class="m-t-xs font-bold">职称</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-8">
+                                                                <h3><strong>小红</strong></h3>
+                                                                <p><i class="fa fa-map-marker"></i> 江苏.宜兴</p>
+                                                                <address>
+                                                                    <strong>公司名称：&&&</strong><br>
+                                                                    公司地址：***********<br>
+                                                                    QQ 100000 <br>
+                                                                    手机 18900000000 <br>
+                                                                    邮编 100020 <br>
+                                                                </address>
+                                                            </div>
+                                                                </a>
+                                                                <div class="contact-box-footer">
+                                                                        <div class="m-t-xs btn-group">                                              
+                                                                            <a href=""  class="btn btn-xs btn-white"><i class="fa fa-envelope"></i> 发信息</a>
+                                                                            <a href=""  class="btn btn-xs btn-white"><i class="fa fa-pencil"></i> 修改信息</a>
+                                                                            <a href=""  class="btn btn-xs btn-white"><i class="fa fa-ban"></i> 设置禁用</a>
+                                                                        </div>
+                                                                    </div>
+                                                
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                            <div class="contact-box">
+                                                                <a class="row" href="#">
+                                                                <div class="col-4">
+                                                                    <div class="text-center">
+                                                                        <img alt="image" class="rounded-circle m-t-xs img-fluid" src="img/a4.jpg">
+                                                                        <div class="m-t-xs font-bold">职称</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-8">
+                                                                    <h3><strong>小红</strong></h3>
+                                                                    <p><i class="fa fa-map-marker"></i> 江苏.宜兴 </p>
+                                                                    <address>
+                                                                        <strong>公司名称：&&&</strong><br>
+                                                                        公司地址：***********<br>
+                                                                        QQ 100000 <br>
+                                                                        手机 18900000000 <br>
+                                                                        邮编 100020 <br>
+                                                                    </address>
+                                                                </div>
+                                                                    </a>
+                                                                    <div class="contact-box-footer">
+                                                                            <div class="m-t-xs btn-group">                                              
+                                                                                <a href=""  class="btn btn-xs btn-white"><i class="fa fa-envelope"></i> 发信息</a>
+                                                                                <a href=""  class="btn btn-xs btn-white"><i class="fa fa-pencil"></i> 修改信息</a>
+                                                                                <a href=""  class="btn btn-xs btn-white"><i class="fa fa-ban"></i> 设置禁用</a>
+                                                                            </div>
+                                                                        </div>
+                                                    
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3">
+                                                                <div class="contact-box">
+                                                                    <a class="row" href="#">
+                                                                    <div class="col-4">
+                                                                        <div class="text-center">
+                                                                            <img alt="image" class="rounded-circle m-t-xs img-fluid" src="img/a6.jpg">
+                                                                            <div class="m-t-xs font-bold">职称</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-8">
+                                                                        <h3><strong>小红</strong></h3>
+                                                                        <p><i class="fa fa-map-marker"></i> 江苏.宜兴 </p>
+                                                                        <address>
+                                                                            <strong>公司名称：&&&</strong><br>
+                                                                            公司地址：***********<br>
+                                                                            QQ 100000 <br>
+                                                                            手机 18900000000 <br>
+                                                                            邮编 100020 <br>
+                                                                        </address>
+                                                                    </div>
+                                                                        </a>
+                                                                        <div class="contact-box-footer">
+                                                                                <div class="m-t-xs btn-group">                                              
+                                                                                    <a href=""  class="btn btn-xs btn-white"><i class="fa fa-envelope"></i> 发信息</a>
+                                                                                    <a href=""  class="btn btn-xs btn-white"><i class="fa fa-pencil"></i> 修改信息</a>
+                                                                                    <a href=""  class="btn btn-xs btn-white"><i class="fa fa-ban"></i> 设置禁用</a>
+                                                                                </div>
+                                                                            </div>
+                                                        
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                    <div class="contact-box">
+                                                                        <a class="row" href="#">
+                                                                        <div class="col-4">
+                                                                            <div class="text-center">
+                                                                                <img alt="image" class="rounded-circle m-t-xs img-fluid" src="img/a5.jpg">
+                                                                                <div class="m-t-xs font-bold">职称</div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-8">
+                                                                            <h3><strong>小红</strong></h3>
+                                                                            <p><i class="fa fa-map-marker"></i> 江苏.宜兴</p>
+                                                                            <address>
+                                                                                <strong>公司名称：&&&</strong><br>
+                                                                                公司地址：***********<br>
+                                                                                QQ 100000 <br>
+                                                                                手机 18900000000 <br>
+                                                                                邮编 100020 <br>
+                                                                            </address>
+                                                                        </div>
+                                                                            </a>
+                                                                            <div class="contact-box-footer">
+                                                                                    <div class="m-t-xs btn-group">                                              
+                                                                                        <a href=""  class="btn btn-xs btn-white"><i class="fa fa-envelope"></i> 发信息</a>
+                                                                                        <a href=""  class="btn btn-xs btn-white"><i class="fa fa-pencil"></i> 修改信息</a>
+                                                                                        <a href=""  class="btn btn-xs btn-white"><i class="fa fa-ban"></i> 设置禁用</a>
+                                                                                    </div>
+                                                                                </div>
+                                                            
+                                                                    </div>
+                                                                </div>
+                                                     
+                                                                                
+                                                             
+                                                </div>
+                                                </div>
+                                </div>
+                            </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ibox chat-view col-sm-3">
+
+                        <div class="ibox-title">
+                            <small class="float-right text-muted">最后消息：2017年12月26日星期一 18:39:23</small>
+                             对方ID：小明
+                        </div>
+                <div class="ibox-content">
+        
+                        <div class="row">
+        
+                            <div class="col-md-12 ">
+                                <div class="chat-discussion">
+        
+                                    <div class="chat-message left">
+                                        <img class="message-avatar" src="img/a5.jpg" alt="" >
+                                        <div class="message">
+                                            <a class="message-author" href="#"> 小明 </a>
+                                            <span class="message-date">  2017年12月25日星期五 - 11:12:36 </span>
+                                            <span class="message-content">
+                                            聊天互动内容信息
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="chat-message right">
+                                        <img class="message-avatar" src="img/a4.jpg" alt="" >
+                                        <div class="message">
+                                            <a class="message-author" href="#"> 小明 </a>
+                                            <span class="message-date">  2017年12月25日星期五 - 11:12:36 </span>
+                                            <span class="message-content">
+                                            聊天互动内容信息
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="chat-message right">
+                                        <img class="message-avatar" src="img/a4.jpg" alt="" >
+                                        <div class="message">
+                                            <a class="message-author" href="#"> 小明 </a>
+                                            <span class="message-date">  2017年12月25日星期五 - 11:12:36 </span>
+                                            <span class="message-content">
+                                            聊天互动内容信息
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="chat-message left">
+                                        <img class="message-avatar" src="img/a5.jpg" alt="" >
+                                        <div class="message">
+                                            <a class="message-author" href="#"> 小明 </a>
+                                            <span class="message-date">  2017年12月25日星期五 - 11:12:36 </span>
+                                            <span class="message-content">
+                                            聊天互动内容信息
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="chat-message right">
+                                        <img class="message-avatar" src="img/a4.jpg" alt="" >
+                                        <div class="message">
+                                            <a class="message-author" href="#"> 小明 </a>
+                                            <span class="message-date">  2017年12月25日星期五 - 11:12:36 </span>
+                                            <span class="message-content">
+                                            聊天互动内容信息
+                                            </span>
+                                        </div>
+                                    </div>
+        
+                                </div>
+        
+                            </div>
+                          
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="chat-message-form">
+        
+                                    <div class="form-group">
+        
+                                        <textarea class="form-control message-input" name="message" placeholder="输入聊天消息"></textarea>
+                                    </div>
+        
+                                </div>
+                            </div>
+                        </div>
+        
+        
+                    </div>
+                </div> 
+            </div>
+        </div>
+     
+       
+
+        <div class="footer">
+            <div class="float-right">
+                <strong> AKZN 2019.9.16</strong>
+            </div>
+            <div>
+                <strong>Copyright</strong> AKZN 2019.9.16
+            </div>
+        </div>
+
+        </div>
+        </div>
+
+
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+<script>
+
+    $(document).ready(function(){
+
+        $(document.body).on("click",".client-link",function(e){
+            e.preventDefault()
+            $(".selected .tab-pane").removeClass('active');
+            $($(this).attr('href')).addClass("active");
+        });
+
+    });
+
+
+</script>
+
+</body>
+</html>

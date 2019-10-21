@@ -1,0 +1,449 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>安靠智能后台管理系统</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+            <nav class="navbar-default navbar-static-side" role="navigation">
+                    <div class="sidebar-collapse">
+                        <ul class="nav metismenu" id="side-menu">
+                            <li class="nav-header">
+                                <div class="dropdown profile-element">
+                                    <img alt="image" class="rounded-circle" src="img/profile_small.jpg" />
+                                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                        <span class="block m-t-xs font-bold">张三</span>
+                                        <span class="text-muted text-xs block">管理员 <b class="caret"></b></span>
+                                    </a>
+                                    <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                        <li><a class="dropdown-item" href="#">个人信息</a></li>
+                                     
+                                        <li class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" href="login.html">退出</a></li>
+                                    </ul>
+                                </div>
+                                <div class="logo-element">
+                                    AKZN
+                                </div>
+                            </li>
+                          
+                            <li >
+                                    <a href="index.html"><i class="fa fa-diamond"></i> <span class="nav-label">首页</span></a>
+                                </li>
+                
+                                <li class="active" >
+                                        <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">工程项目管理</span><span class="fa arrow"></span></a>
+                                        <ul class="nav nav-second-level collapse">
+                                            <li  class="active"><a href="projects.html"> 项目管理</a></li>
+                                            <li><a href="workline.html">工作流管理</a></li>
+                                            <li><a href="rules_list.html">质检规则管理</a></li>
+                                            <li><a href="standard.html">工艺标准管理</a></li>
+                                            <li><a href="file_manager.html">工程文档管理</a></li>
+                                        </ul>
+                                    </li>
+                            <li>
+                                <a href="#"><i class="fa fa-envelope"></i> <span class="nav-label">APP管理 </span><span class="label label-warning float-right">新</span></a>
+                                <ul class="nav nav-second-level collapse">
+                                    <li><a href="ecommerce_products_grid.html">产品管理</a></li>
+                                    <li><a href="new_test.html">实验管理</a></li>
+                                    <li><a href="new_repair.html">报修管理</a></li>
+                                    <li><a href="feedback.html">反馈管理</a></li>
+                         
+                                    <li><a href="clients.html">app用户管理</a></li>
+                                    
+                                </ul>
+                            </li>
+                            <li>
+                                    <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">系统管理 </span><span class="label label-warning float-right">16/24</span></a>
+                                    <ul class="nav nav-second-level collapse">
+                                     
+                                        <li><a href="diary.html">系统操作日志</a></li>
+                                       
+                                    </ul>
+                                </li>
+                           
+                                    
+                             
+                            <li>
+                                <a href="news.html"><i class="fa fa-flask"></i> <span class="nav-label">新闻管理</span></a>
+                            </li>
+                            <li>
+                                    <a href="full_height.html"><i class="fa fa-flask"></i> <span class="nav-label">公告管理</span></a>
+                                </li>
+                        </ul>
+        
+                    </div>
+                </nav>
+
+
+    <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+                    <nav class="navbar navbar-static-top  " role="navigation" style="margin-bottom: 0">
+                        <div class="navbar-header">
+                            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                            <form role="search" class="navbar-form-custom" action="search_results.html">
+                                <div class="form-group">
+                                    <input type="text" placeholder="请输入搜索内容" class="form-control" name="top-search" id="top-search">
+                                </div>
+                            </form>
+                        </div>
+                        <ul class="nav navbar-top-links navbar-right">
+                            <li>
+                                <span class="m-r-sm text-muted welcome-message">欢迎来到安靠智能管理后台</span>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                    <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
+                                </a>
+                           
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                    <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
+                                </a>
+                              
+                            </li>
+        
+        
+                            <li>
+                                <a href="login.html">
+                                    <i class="fa fa-sign-out"></i> 注销
+                                </a>
+                            </li>
+                        </ul>
+        
+                    </nav>
+                </div>
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-sm-4">
+                <h2>项目详情</h2>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="index.html">主页</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                            <a href="projects.html">项目列表</a>
+                        </li>
+                    <li class="breadcrumb-item active">
+                        <strong>项目详情</strong>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="wrapper wrapper-content animated fadeInUp">
+            <div class="row">
+                <div class="col-lg-9">
+
+                    <div class="ibox">
+                        <div class="ibox-content">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="m-b-md">
+                                        
+                                        <h2>工程代号000</h2>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <dl class="row mb-0">
+                                        <div class="col-sm-4 text-sm-right"><dt>状态:</dt> </div>
+                                        <div class="col-sm-8 text-sm-left"><dd class="mb-1"><span class="label label-primary">正在进行</span></dd></div>
+                                    </dl>
+                                    <dl class="row mb-0">
+                                        <div class="col-sm-4 text-sm-right"><dt>创建者:</dt> </div>
+                                        <div class="col-sm-8 text-sm-left"><dd class="mb-1">张三</dd> </div>
+                                    </dl>
+                                    <dl class="row mb-0">
+                                            <div class="col-sm-4 text-sm-right"><dt>创建时间:</dt> </div>
+                                            <div class="col-sm-8 text-sm-left"><dd class="mb-1">2019.9.9 12:30:55</dd> </div>
+                                        </dl>
+                                    <dl class="row mb-0">
+                                        <div class="col-sm-4 text-sm-right"><dt>项目经理:</dt> </div>
+                                        <div class="col-sm-8 text-sm-left"> <dd class="mb-1"><a href="#" class="text-navy"> 张三</a> </dd></div>
+                                    </dl>
+                                  
+
+                                </div>
+                                <div class="col-lg-6" id="cluster_info">
+
+                                    <dl class="row mb-0">
+                                        <div class="col-sm-4 text-sm-right">
+                                            <dt>项目开始时间:</dt>
+                                        </div>
+                                        <div class="col-sm-8 text-sm-left">
+                                            <dd class="mb-1">2019.9.10 12:15:57</dd>
+                                        </div>
+                                    </dl>
+                                    <dl class="row mb-0">
+                                        <div class="col-sm-4 text-sm-right">
+                                            <dt>项目结束时间:</dt>
+                                        </div>
+                                        <div class="col-sm-8 text-sm-left">
+                                            <dd class="mb-1"> 未定</dd>
+                                        </div>
+                                    </dl>
+                                    <dl class="row mb-0">
+                                        <div class="col-sm-4 text-sm-right">
+                                            <dt>参与人员:</dt>
+                                        </div>
+                                        <div class="col-sm-8 text-sm-left">
+                                            <dd class="project-people mb-1">
+                                                <a href=""><img alt="image" class="rounded-circle" src="img/a3.jpg"></a>
+                                                <a href=""><img alt="image" class="rounded-circle" src="img/a1.jpg"></a>
+                                                <a href=""><img alt="image" class="rounded-circle" src="img/a2.jpg"></a>
+                                                <a href=""><img alt="image" class="rounded-circle" src="img/a4.jpg"></a>
+                                                <a href=""><img alt="image" class="rounded-circle" src="img/a5.jpg"></a>
+                                            </dd>
+                                        </div>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <dl class="row mb-0">
+                                        <div class="col-sm-2 text-sm-right">
+                                            <dt>完成度:</dt>
+                                        </div>
+                                        <div class="col-sm-10 text-sm-left">
+                                            <dd>
+                                                <div class="progress m-b-1">
+                                                    <div style="width: 60%;" class="progress-bar progress-bar-striped progress-bar-animated"></div>
+                                                </div>
+                                                <small>项目完成 <strong>60%</strong></small>
+                                            </dd>
+                                        </div>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="row m-t-sm">
+                                <div class="col-lg-12">
+                                    <div class="panel blank-panel">
+                                        <div class="panel-heading">
+                                            <div class="panel-options">
+                                                <ul class="nav nav-tabs">
+                                                    <li><a class="nav-link active" href="#tab-1" data-toggle="tab">项目信息</a></li>
+                                                    <li><a class="nav-link" href="#tab-2" data-toggle="tab">项目工作情况</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="panel-body">
+
+                                            <div class="tab-content">
+                                                <div class="tab-pane active" id="tab-1">
+
+                                                        <div class="ibox-content">
+
+                                                                <div class="stream-small">
+                                                                    <span class="label label-primary"> 文件</span>
+                                                                    <span class="text-muted"> 今天在 10:30:50 </span> / <a href="#">小明</a> 上传了新的施工照片。
+                                                                </div>
+                                                                <div class="stream-small">
+                                                                        <span class="label label-warning"> 活动</span>
+                                                                        <span class="text-muted"> 今天在 08:10:50 </span> / <a href="#">小明</a> 完成了工作流111
+                                                                    </div>
+                                                            
+                                                                <div class="stream-small">
+                                                                    <span class="label label-primary"> 文件</span>
+                                                                    <span class="text-muted"> 昨天在 10:02:33 </span> / <a href="#">小明</a> 上传了新的施工照片。
+                                                                </div>
+                                                                <div class="stream-small">
+                                                                    <span class="label label-warning"> 活动</span>
+                                                                    <span class="text-muted"> 今天在 08:10:50 </span> / <a href="#">小明</a>  完成了工作流222
+                                                                </div>
+                                                             
+                                                                <div class="stream-small">
+                                                                    <span class="label label-default"> 预警</span>
+                                                                    <span class="text-muted"> 今天在 04:30:33 </span> / <a href="#">小明</a>  上传的数据出错
+                                                                </div>
+                                                                <div class="stream-small">
+                                                                    <span class="label label-default"> 预警</span>
+                                                                    <span class="text-muted"> 今天在 11:43:59 </span> / <a href="#">小明</a>  上传的数据出错
+                                                                </div>
+                                                        </div>
+
+
+
+                                                   
+                                                </div>
+                                                <div class="tab-pane" id="tab-2">
+
+                                                    <table class="table table-striped">
+                                                        <thead>
+                                                            <tr>
+                                                                 <th>序号</th>
+                                                                <th>状态</th>
+                                                                <th>标题</th>
+                                                                <th>开始时间</th>
+                                                                <th>结束时间</th>
+                                                                <th>施工图片</th>
+                                                                <th>工艺标准</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>
+                                                                    <span class="label label-primary"><i class="fa fa-check"></i> 已完成</span>
+                                                                </td>
+                                                                <td>
+                                                                    第一步：安装电缆
+                                                                </td>
+                                                                <td>
+                                                                    2018.12.12 10:10:1
+                                                                </td>
+                                                                <td>
+                                                                    2019.1.12 10:16:36
+                                                                </td>
+                                                                <td>照片</td>
+                                                                <td>
+                                                                        <button type="button" class="btn btn-outline btn-info">查看</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                    <td>1</td>
+                                                                    <td>
+                                                                        <span class="label label-primary"><i class="fa fa-check"></i> 已完成</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        第一步：安装电缆
+                                                                    </td>
+                                                                    <td>
+                                                                        2018.12.12 10:10:1
+                                                                    </td>
+                                                                    <td>
+                                                                        2019.1.12 10:16:36
+                                                                    </td>
+                                                                    <td>照片</td>
+                                                                    <td>
+                                                                            <button type="button" class="btn btn-outline btn-info">查看</button>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                        <td>1</td>
+                                                                        <td>
+                                                                            <span class="label label-primary"><i class="fa fa-check"></i> 已完成</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            第一步：安装电缆
+                                                                        </td>
+                                                                        <td>
+                                                                            2018.12.12 10:10:1
+                                                                        </td>
+                                                                        <td>
+                                                                            2019.1.12 10:16:36
+                                                                        </td>
+                                                                        <td>照片</td>
+                                                                        <td>
+                                                                                <button type="button" class="btn btn-outline btn-info">查看</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                            <td>1</td>
+                                                                            <td>
+                                                                                <span class="label label-primary"><i class="fa fa-check"></i> 已完成</span>
+                                                                            </td>
+                                                                            <td>
+                                                                                第一步：安装电缆
+                                                                            </td>
+                                                                            <td>
+                                                                                2018.12.12 10:10:1
+                                                                            </td>
+                                                                            <td>
+                                                                                2019.1.12 10:16:36
+                                                                            </td>
+                                                                            <td>照片</td>
+                                                                            <td>
+                                                                                    <button type="button" class="btn btn-outline btn-info">查看</button>
+                                                                            </td>
+                                                                        </tr>
+                                                            
+                                                           
+
+                                                        </tbody>
+                                                    </table>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+        <div class="footer">
+                <div class="float-right">
+                    <strong> AKZN 2019.9.16</strong>
+                </div>
+                <div>
+                    <strong>Copyright</strong> AKZN 2019.9.16
+                </div>
+            </div>
+
+    </div>
+        </div>
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            $('#loading-example-btn').click(function () {
+                btn = $(this);
+                simpleLoad(btn, true)
+
+                // Ajax example
+//                $.ajax().always(function () {
+//                    simpleLoad($(this), false)
+//                });
+
+                simpleLoad(btn, false)
+            });
+        });
+
+        function simpleLoad(btn, state) {
+            if (state) {
+                btn.children().addClass('fa-spin');
+                btn.contents().last().replaceWith(" Loading");
+            } else {
+                setTimeout(function () {
+                    btn.children().removeClass('fa-spin');
+                    btn.contents().last().replaceWith(" Refresh");
+                }, 2000);
+            }
+        }
+    </script>
+</body>
+
+</html>
